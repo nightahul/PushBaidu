@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 插入整个布局的背景图片 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:stretchColumns="1" >
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:padding="5dip"
+                    android:text="账号:"
+                    android:textColor="#555555"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/login_et_loginname"
+                    android:scrollHorizontally="true"
+                    android:text="user00001" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="right"
+                    android:padding="5dip"
+                    android:text="密码:"
+                    android:textColor="#555555"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/login_et_password"
+                    android:password="true"
+                    android:scrollHorizontally="true" />
+            </TableRow>
+        </TableLayout>
+
+        <RadioGroup
+            android:id="@+id/login_rg_servergroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/login_rb_server01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内网测试服务器"
+                android:textColor="#555555" />
+
+            <RadioButton
+                android:id="@+id/login_rb_server02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="外网测试服务器"
+                android:textColor="#555555" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/login_bt_login"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_style_green"
+            android:gravity="center"
+            android:onClick="login"
+            android:text="登　录"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/login_bt_about"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_style_green"
+            android:gravity="center"
+            android:onClick="go_about"
+            android:text="关　于"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+        
+                <Button
+            android:id="@+id/login_bt_location"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_style_green"
+            android:gravity="center"
+            android:onClick="go_location"
+            android:text="定　位"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
